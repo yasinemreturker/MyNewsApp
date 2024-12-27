@@ -40,6 +40,8 @@ android {
 
 dependencies {
 
+    implementation(project(":library:common"))
+
     //Android
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

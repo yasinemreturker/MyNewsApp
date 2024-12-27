@@ -51,6 +51,9 @@ android {
 
 dependencies {
 
+    implementation(project(":feature:onboarding"))
+    implementation(project(":library:common"))
+
     //Android
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
