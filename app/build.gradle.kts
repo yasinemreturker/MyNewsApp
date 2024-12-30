@@ -50,6 +50,7 @@ android {
 }
 
 dependencies {
+    // Projects
     implementation(project(":feature:onboarding"))
     implementation(project(":library:common"))
 
