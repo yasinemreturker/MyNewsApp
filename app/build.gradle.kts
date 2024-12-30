@@ -50,7 +50,7 @@ android {
 }
 
 dependencies {
-
+    // Projects
     implementation(project(":feature:onboarding"))
     implementation(project(":library:common"))
 
@@ -78,6 +78,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
 
     //Splash Api
-    implementation (libs.splashapi.core)
-
+    implementation(libs.splashapi.core)
 }
