@@ -22,6 +22,7 @@ import com.example.common.presentation.Dimens.MediumPadding2
 import com.example.common.presentation.Dimens.PageIndicatorWidth
 import com.example.onboarding.domain.pages
 import com.example.onboarding.presentation.component.NewsButton
+import com.example.onboarding.presentation.component.NewsTextButton
 import com.example.onboarding.presentation.component.OnBoardingPage
 import com.example.onboarding.presentation.component.PageIndicator
 import kotlinx.coroutines.launch
@@ -64,36 +65,36 @@ fun OnBoardingScreen(
                 selectedPage = pagerState.currentPage
             )
 
-//            Row(verticalAlignment = Alignment.CenterVertically) {
-//
-//                val scope = rememberCoroutineScope()
-//
-//                if (buttonState.value[0].isNotEmpty()) {
-//                    NewsTextButton(
-//                        text = buttonState.value[0],
-//                        onClick = {
-//                            scope.launch {
-//                                pagerState.animateScrollToPage(page = pagerState.currentPage - 1)
-//                            }
-//                        }
-//                    )
-//                }
-//
-//                NewsButton(
-//                    text = buttonState.value[1],
-//                    onClick = {
-//                        scope.launch {
-//                            if (pagerState.currentPage == 2) {
-//                                event(OnBoardingEvent.SaveAppEntry)
-//                            } else {
-//                                pagerState.animateScrollToPage(
-//                                    page = pagerState.currentPage + 1
-//                                )
-//                            }
-//                        }
-//                    }
-//                )
-//            }
+            Row(verticalAlignment = Alignment.CenterVertically) {
+
+                val scope = rememberCoroutineScope()
+
+                if (buttonState.value[0].isNotEmpty()) {
+                    NewsTextButton(
+                        text = buttonState.value[0],
+                        onClick = {
+                            scope.launch {
+                                pagerState.animateScrollToPage(page = pagerState.currentPage - 1)
+                            }
+                        }
+                    )
+                }
+
+                NewsButton(
+                    text = buttonState.value[1],
+                    onClick = {
+                        scope.launch {
+                            if (pagerState.currentPage == 2) {
+                                //event(OnBoardingEvent.SaveAppEntry)
+                            } else {
+                                pagerState.animateScrollToPage(
+                                    page = pagerState.currentPage + 1
+                                )
+                            }
+                        }
+                    }
+                )
+            }
         }
         Spacer(modifier = Modifier.weight(0.5f))
     }
