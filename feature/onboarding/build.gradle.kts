@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -41,6 +43,7 @@ android {
 dependencies {
 
     implementation(project(":library:common"))
+    implementation(project(":feature:home"))
 
     //Android
     implementation(libs.androidx.core.ktx)
@@ -63,4 +66,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.hilt.navigation)
+    implementation(libs.hilt.compose)
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
