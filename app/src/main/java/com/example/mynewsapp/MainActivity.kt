@@ -7,12 +7,14 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.lifecycleScope
 import com.example.common.presentation.ui.theme.MyNewsAppTheme
-import com.example.home.domain.usecase.app_entry.AppEntryUseCases
+import com.example.onboarding.domain.usecase.AppEntryUseCases
+import com.example.onboarding.presentation.OnBoardingViewModel
 import com.example.onboarding.presentation.screen.OnBoardingScreen
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -28,14 +30,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         lifecycleScope.launch {
-            appEntryUseCases.readAppEntry().collect{
+            appEntryUseCases.readAppEntry().collect {
                 Log.d("Test", it.toString())
             }
         }
 
         setContent {
             MyNewsAppTheme {
-                OnBoardingScreen()
+                val viewModel: OnBoardingViewModel = hiltViewModel()
+                OnBoardingScreen(event = viewModel::OnEvent)
             }
         }
     }
