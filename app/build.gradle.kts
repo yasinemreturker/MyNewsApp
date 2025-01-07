@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -51,6 +53,7 @@ android {
 
 dependencies {
     // Projects
+    implementation(project(":feature:home"))
     implementation(project(":feature:onboarding"))
     implementation(project(":library:common"))
 
@@ -79,4 +82,15 @@ dependencies {
 
     //Splash Api
     implementation(libs.splashapi.core)
+
+    //Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.hilt.navigation)
+    implementation(libs.hilt.compose)
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
