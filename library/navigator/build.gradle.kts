@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.onboarding"
+    namespace = "com.example.navigator"
     compileSdk = 34
 
     defaultConfig {
@@ -41,9 +41,8 @@ android {
 }
 
 dependencies {
-
-    implementation(project(":library:common"))
-    implementation(project(":feature:home"))
+    // Project
+    implementation(project(":feature:onboarding"))
 
     //Android
     implementation(libs.androidx.core.ktx)
@@ -66,14 +65,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //Compose Navigation
+    implementation(libs.androidx.navigation.compose)
+
     //Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation)
     implementation(libs.hilt.compose)
-
-    //Accompanist
-    implementation(libs.accompanist.core)
 }
 
 // Allow references to generated code
