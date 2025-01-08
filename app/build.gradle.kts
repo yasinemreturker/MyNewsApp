@@ -56,6 +56,7 @@ dependencies {
     implementation(project(":feature:home"))
     implementation(project(":feature:onboarding"))
     implementation(project(":library:common"))
+    implementation(project(":library:navigator"))
 
     //Android
     implementation(libs.androidx.core.ktx)

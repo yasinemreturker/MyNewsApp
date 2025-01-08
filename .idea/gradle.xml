@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/feature/search" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/common" />
+            <option value="$PROJECT_DIR$/library/navigator" />
             <option value="$PROJECT_DIR$/library/network" />
             <option value="$PROJECT_DIR$/library/utility" />
           </set>
