@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(project(":library:network"))
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
@@ -67,4 +68,8 @@ dependencies {
 
     // Data Store
     implementation(libs.datastore.core)
+
+    // Paging 3
+    implementation(libs.paging.core)
+    implementation(libs.paging.compose)
 }

@@ -34,10 +34,19 @@ android {
 
 dependencies {
 
+    // Project
+    implementation(project(":library:common"))
+
+    // Android
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Retrofit 2
+    implementation(libs.retrofit.core)
 }

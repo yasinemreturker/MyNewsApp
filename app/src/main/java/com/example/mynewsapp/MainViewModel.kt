@@ -26,13 +26,13 @@ class MainViewModel @Inject constructor(
 
     init {
         appEntryUseCases.readAppEntry().onEach { shouldStartFromHomeScreen ->
-            startDestination = if(shouldStartFromHomeScreen){
+            startDestination = if (shouldStartFromHomeScreen) {
                 Route.NewsNavigation.route
-            }else{
+            } else {
                 Route.AppStartNavigation.route
             }
             delay(3000)
-            splashCondition= false
+            splashCondition = false
         }.launchIn(viewModelScope)
     }
 }
