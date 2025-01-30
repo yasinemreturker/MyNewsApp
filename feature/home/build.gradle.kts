@@ -80,6 +80,9 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation)
     implementation(libs.hilt.compose)
+
+    //Coil
+    implementation(libs.coil.core)
 }
 
 // Allow references to generated code
