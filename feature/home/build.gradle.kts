@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -41,6 +43,7 @@ android {
 dependencies {
     // Projects
     implementation(project(":library:common"))
+    implementation(project(":library:network"))
 
     //Android
     implementation(libs.androidx.core.ktx)
@@ -51,7 +54,6 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(project(":library:network"))
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
@@ -72,4 +74,15 @@ dependencies {
     // Paging 3
     implementation(libs.paging.core)
     implementation(libs.paging.compose)
+
+    //Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.hilt.navigation)
+    implementation(libs.hilt.compose)
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

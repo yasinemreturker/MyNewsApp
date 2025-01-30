@@ -8,4 +8,6 @@ object Constant {
 
     const val API_KEY = "8f48bb877a874f768ace2815b5b03662"
 
+    const val BASE_URL = "https://newsapi.org/v2/"
+
 }

@@ -20,6 +20,7 @@ accompanist = "0.36.0"
 paging = "3.3.5"
 retrofit = "2.11.0"
 
+
 [libraries]
 
 # Android
@@ -71,9 +72,9 @@ accompanist-core = { module = "com.google.accompanist:accompanist-systemuicontro
 paging-core = { module = "androidx.paging:paging-runtime", version.ref = "paging" }
 paging-compose = { module = "androidx.paging:paging-compose", version.ref = "paging" }
 
-
 # Retrofit 2
 retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-convertergson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 
 
 [plugins]
