@@ -67,6 +67,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(project(":library:network"))
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
@@ -89,6 +90,10 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation)
     implementation(libs.hilt.compose)
+
+    // Retrofit 2
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.convertergson)
 }
 
 // Allow references to generated code

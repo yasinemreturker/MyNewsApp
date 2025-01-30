@@ -17,6 +17,10 @@ hiltCompose = "1.0.0"
 hilt = "2.51.1"
 navigationCompose = "2.8.1"
 accompanist = "0.36.0"
+paging = "3.3.5"
+retrofit = "2.11.0"
+coil = "2.4.0"
+
 
 [libraries]
 
@@ -64,6 +68,17 @@ androidx-navigation-ui = { module = "androidx.navigation:navigation-ui", version
 
 # Accompanist   // For Horizontal Pager
 accompanist-core = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
+
+# Paging3
+paging-core = { module = "androidx.paging:paging-runtime", version.ref = "paging" }
+paging-compose = { module = "androidx.paging:paging-compose", version.ref = "paging" }
+
+# Retrofit 2
+retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-convertergson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+
+# Coil
+coil-core = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
