@@ -12,6 +12,7 @@ import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import com.example.common.presentation.Dimens.ExtraSmallPadding2
 import com.example.common.presentation.Dimens.MediumPadding1
+import com.example.common.presentation.component.EmptyScreen
 import com.example.network.api.home.model.local.Article
 
 @Composable
@@ -74,7 +75,7 @@ fun handlePagingResult(
         }
 
         error != null -> {
-            //EmptyScreen()
+            EmptyScreen()
             false
         }
 
