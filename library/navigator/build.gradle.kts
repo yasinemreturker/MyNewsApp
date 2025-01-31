@@ -43,6 +43,7 @@ android {
 dependencies {
     // Project
     implementation(project(":feature:onboarding"))
+    implementation(project(":feature:home"))
 
     //Android
     implementation(libs.androidx.core.ktx)
@@ -73,6 +74,10 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation)
     implementation(libs.hilt.compose)
+
+    // Paging 3
+    implementation(libs.paging.core)
+    implementation(libs.paging.compose)
 }
 
 // Allow references to generated code

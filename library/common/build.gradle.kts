@@ -63,4 +63,8 @@ dependencies {
 
     //Splash Api
     implementation (libs.splashapi.core)
+
+    // Paging 3
+    implementation(libs.paging.core)
+    implementation(libs.paging.compose)
 }
