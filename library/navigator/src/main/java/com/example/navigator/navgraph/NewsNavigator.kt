@@ -20,6 +20,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.example.home.presentation.view.detail.DetailsScreen
+import com.example.home.presentation.view.detail.DetailsViewModel
 import com.example.home.presentation.view.home.HomeScreen
 import com.example.home.presentation.viewmodel.HomeViewModel
 import com.example.navigator.R
@@ -130,21 +132,20 @@ fun NewsNavigator() {
 //                )
 //            }
 
-//            composable(route = Route.DetailsScreen.route) {
-//                val viewModel: DetailsViewModel = hiltViewModel()
+            composable(route = Route.DetailsScreen.route) {
+                val viewModel: DetailsViewModel = hiltViewModel()
 //                if (viewModel.sideEffect != null) {
 //                    Toast.makeText(LocalContext.current, viewModel.sideEffect, Toast.LENGTH_SHORT)
 //                        .show()
 //                    viewModel.onEvent(DetailsEvent.RemoveSideEffect)
 //                }
-//                navController.previousBackStackEntry?.savedStateHandle?.get<Article?>("article")
-//                    ?.let { article ->
-//                        DetailsScreen(
-//                            article = article,
-//                            event = viewModel::onEvent,
-//                            navigateUp = { navController.navigateUp() })
-//                    }
-//            }
+                navController.previousBackStackEntry?.savedStateHandle?.get<Article?>("article")
+                    ?.let { article ->
+                        DetailsScreen(
+                            article = article,
+                            navigateUp = { navController.navigateUp() })
+                    }
+            }
 
 //            composable(route = Route.BookmarkScreen.route) {
 //                val viewModel: BookmarkViewModel = hiltViewModel()

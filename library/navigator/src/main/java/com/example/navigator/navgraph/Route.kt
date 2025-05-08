@@ -2,13 +2,14 @@ package com.example.navigator.navgraph
 
 sealed class Route(
     val route: String
-) {
-    object OnBoardingScreen : Route("onBoardingScreen")
-    object HomeScreen : Route("HomeScreen")
-    object SearchScreen : Route("SearchScreen")
-    object BookmarkScreen : Route("BookmarkScreen")
-    object DetailsScreen : Route("DetailsScreen")
-    object AppStartNavigation : Route("appStartNavigation")
-    object NewsNavigation : Route("newsNavigation")
-    object NewsNavigatorScreen : Route("newsNavigatorScreen")
+){
+
+    object OnBoardingScreen : Route(route = "onBoardingScreen")
+    object HomeScreen : Route(route = "homeScreen")
+    object SearchScreen : Route(route = "searchScreen")
+    object BookmarkScreen : Route(route = "bookmarkScreen")
+    object DetailsScreen : Route(route = "detailsScreen")
+    object AppStartNavigation : Route(route = "appStartNavigation")
+    object NewsNavigation : Route(route = "newsNavigation")
+    object NewsNavigatorScreen : Route(route = "newsNavigator")
 }

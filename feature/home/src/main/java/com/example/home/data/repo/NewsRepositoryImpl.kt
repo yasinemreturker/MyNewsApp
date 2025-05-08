@@ -24,4 +24,13 @@ class NewsRepositoryImpl(
             }
         ).flow
     }
+
+    override suspend fun selectArticle(url: String): Article? {
+        TODO("Not yet implemented")
+    }
+
+//    override suspend fun selectArticle(url: String): Article? {
+//        return newsDao.getArticle(url)
+//    }
+
 }

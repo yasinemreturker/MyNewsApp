@@ -26,7 +26,6 @@ import com.example.common.presentation.ui.theme.MyNewsAppTheme
 fun DetailsTopBar(
     onBrowsingClick: () -> Unit,
     onShareClick: () -> Unit,
-    onBookmarkClick: () -> Unit,
     onBackClick: () -> Unit
 ) {
 
@@ -47,12 +46,12 @@ fun DetailsTopBar(
             }
         },
         actions = {
-            IconButton(onClick = onBookmarkClick) {
-                Icon(
-                    painter = painterResource(id = R.drawable.ic_bookmark),
-                    contentDescription = null
-                )
-            }
+//            IconButton(onClick = onBookmarkClick) {
+//                Icon(
+//                    painter = painterResource(id = R.drawable.ic_bookmark),
+//                    contentDescription = null
+//                )
+//            }
             IconButton(onClick = onShareClick) {
                 Icon(
                     imageVector = Icons.Default.Share,
@@ -77,8 +76,8 @@ fun DetailsTopBarPreivew() {
         Box(modifier = Modifier.background(MaterialTheme.colorScheme.background)) {
             DetailsTopBar(
                 onBrowsingClick = { /*TODO*/ },
-                onShareClick = { /*TODO*/ },
-                onBookmarkClick = { /*TODO*/ }) {
+                onShareClick = { /*TODO*/ }
+            ) {
             }
         }
     }
