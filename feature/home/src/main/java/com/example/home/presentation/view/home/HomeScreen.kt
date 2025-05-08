@@ -1,8 +1,5 @@
-package com.example.home.presentation.view
+package com.example.home.presentation.view.home
 
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Column
@@ -31,12 +28,12 @@ import com.example.common.presentation.component.SearchBar
 import com.example.home.R
 import com.example.home.presentation.component.ArticlesList
 import com.example.network.api.home.model.local.Article
-import kotlinx.coroutines.delay
 
 @Composable
 fun HomeScreen(
     articles: LazyPagingItems<Article>,
-    navigate: (String) -> Unit
+    navigateToSearch: () -> Unit,
+    navigateToDetails: (Article) -> Unit
 ) {
 
     val titles by remember {
@@ -123,7 +120,7 @@ fun HomeScreen(
             modifier = Modifier.padding(horizontal = MediumPadding1),
             articles = articles,
             onClick = {
-                //navigateToDetails(it)
+                navigateToDetails(it)
             }
         )
     }

@@ -42,8 +42,10 @@ android {
 
 dependencies {
     // Project
+    implementation(project(":library:network"))
     implementation(project(":feature:onboarding"))
     implementation(project(":feature:home"))
+    implementation(project(":library:common"))
 
     //Android
     implementation(libs.androidx.core.ktx)

@@ -8,6 +8,7 @@ import com.example.home.domain.manager.LocalUserManager
 import com.example.home.domain.repo.NewsRepository
 import com.example.home.domain.usecase.GetNews
 import com.example.home.domain.usecase.NewsUseCases
+import com.example.home.domain.usecase.SelectArticle
 import com.example.network.api.home.model.NewsApi
 import com.example.onboarding.domain.usecase.AppEntryUseCases
 import com.example.onboarding.domain.usecase.ReadAppEntry
@@ -62,7 +63,8 @@ object AppModule {
         newsRepository: NewsRepository
     ): NewsUseCases {
         return NewsUseCases(
-            getNews = GetNews(newsRepository)
+            getNews = GetNews(newsRepository),
+            selectArticle = SelectArticle(newsRepository)
         )
     }
 }
