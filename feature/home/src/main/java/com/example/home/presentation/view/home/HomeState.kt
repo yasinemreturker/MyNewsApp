@@ -1,4 +1,4 @@
-package com.example.home.presentation.view
+package com.example.home.presentation.view.home
 
 data class HomeState(
     val scrollValue: Int = 0,

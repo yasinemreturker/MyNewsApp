@@ -7,7 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.example.home.presentation.view.HomeScreen
+import com.example.home.presentation.view.home.HomeScreen
 import com.example.home.presentation.viewmodel.HomeViewModel
 import com.example.onboarding.presentation.OnBoardingViewModel
 import com.example.onboarding.presentation.screen.OnBoardingScreen
