@@ -32,7 +32,8 @@ import com.example.network.api.home.model.local.Article
 @Composable
 fun HomeScreen(
     articles: LazyPagingItems<Article>,
-    navigate: (String) -> Unit
+    navigateToSearch: () -> Unit,
+    navigateToDetails: (Article) -> Unit
 ) {
 
     val titles by remember {
